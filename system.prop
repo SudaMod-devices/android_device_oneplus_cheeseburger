@@ -184,3 +184,6 @@ sys.usb.rmnet.func.name=gsi
 
 # Wi-Fi
 wifi.interface=wlan0
+
+#OTA
+ro.sm.ota=ota
