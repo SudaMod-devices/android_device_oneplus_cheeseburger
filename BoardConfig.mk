@@ -22,14 +22,12 @@
 # definition file).
 #
 
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
+# Inherit from oneplus-common
+-include device/oneplus/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/cheeseburger
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
-
-BOARD_VENDOR := oneplus
 
 # Assertions
 TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
@@ -109,6 +107,7 @@ AUDIO_FEATURE_ENABLED_PCM_OFFLOAD_24 := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 AUDIO_FEATURE_ENABLED_VORBIS_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_WMA_OFFLOAD := true
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 
 BOARD_SUPPORTS_SOUND_TRIGGER := true
@@ -127,7 +126,6 @@ QCOM_BT_USE_SMD_TTY := true
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
-TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
@@ -208,12 +206,14 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
 TARGET_RECOVERY_UI_LIB := librecovery_ui_msm
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
 #PROTOBUF_SUPPORTED := true
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
