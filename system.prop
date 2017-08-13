@@ -193,5 +193,3 @@ persist.dbg.wfc_avail_ovr=1
 #OTA
 ro.sm.ota=ota
 
-
-

@@ -31,7 +31,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 # Assertions
 TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := OnePlus5,cheeseburger,oneplus5,op5,A5000
+TARGET_OTA_ASSERT_DEVICE := OnePlus5,cheeseburger,oneplus5,op5,A5000,ONEPLUS A5000
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true

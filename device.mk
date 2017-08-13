@@ -308,6 +308,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvehiclenetwork-native
 
+# VR
+PRODUCT_PACKAGES += \
+    vr.msm8998
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
