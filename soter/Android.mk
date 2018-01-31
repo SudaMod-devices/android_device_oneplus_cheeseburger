@@ -14,5 +14,17 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/sm.mk
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := soter
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_SRC_FILES := \
+    $(call all-java-files-under, java) \
+    ../../../../frameworks/base/keystore/java/android/security/keystore/KeyProperties.java
+
+LOCAL_JAVA_LIBRARIES := bouncycastle okhttp
+
+include $(BUILD_JAVA_LIBRARY)
